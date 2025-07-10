@@ -9,5 +9,6 @@ return {
 		},
 	config = function()
 		require("neogit").setup()
+		vim.keymap.set("n", "<leader>gt", ":Neogit<CR>")
 	end
 }
