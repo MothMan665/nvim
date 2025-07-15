@@ -13,7 +13,6 @@
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {"lua_ls", "clangd", "gopls", "cmake", } })
-
 		end
 	},
 	{
@@ -26,6 +25,14 @@
 			lspconfig.gopls.setup({})
 			lspconfig.cmake.setup({})
 
+			vim.diagnostic.config({
+				virtual_text = true,
+				signs = true,
+				update_in_insert = false,
+				underline = true,
+				severity_sort = false,
+				float = true,
+			})
 			-- capabilities
 			require('blink.cmp').get_lsp_capabilities()
 
