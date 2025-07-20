@@ -12,7 +12,7 @@
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = {"lua_ls", "clangd", "gopls", "cmake", } })
+				ensure_installed = {"lua_ls", "clangd", "gopls", "cmake", "hyprls"} })
 		end
 	},
 	{
@@ -24,6 +24,7 @@
 			lspconfig.clangd.setup({})
 			lspconfig.gopls.setup({})
 			lspconfig.cmake.setup({})
+			lspconfig.hyprls.setup({})
 
 			vim.diagnostic.config({
 				virtual_text = true,
