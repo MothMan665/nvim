@@ -1,15 +1,15 @@
 return {
-	"catppuccin/nvim", 
-	name = "catppuccin", 
-	priority = 1000, 
+	"catppuccin/nvim",
+	name = "catppuccin",
+	priority = 1000,
 	config = function()
 		require("catppuccin").setup({
 
-  integrations = {
-    ts_rainbow = true,
-  },
-  color_overrides = {
-    mocha = {
+			integrations = {
+				ts_rainbow = true,
+			},
+			color_overrides = {
+				mocha = {
 					ext = "#F4CDE9",
 					subtext1 = "#DEBAD4",
 					subtext0 = "#C8A6BE",
@@ -26,8 +26,8 @@ return {
 				},
 			},
 		})
-		vim.cmd.colorscheme "catppuccin"
-	--	vim.cmd "background = dark"
+		vim.cmd.colorscheme("catppuccin")
+		--	vim.cmd "background = dark"
 		-- vim.cmd.termguicolors
-	end
+	end,
 }
