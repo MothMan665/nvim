@@ -7,6 +7,11 @@ return {
 }
 
 -- keybinds
---
+
 -- comment line (gcc)
--- coment viusa (gc)
+-- block comment (gbc)
+
+-- coment line by num down (gc4j)
+
+-- coment line by num up (gc4k)
+-- coment viusal (gc)
