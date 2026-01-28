@@ -3,9 +3,7 @@ return {
 	opts = {},
 	event = { "BufReadpre", "BufNewFile" },
 	config = function()
-		local conform = require("conform")
-
-		conform.setup({
+		local conform = require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform will run multiple formatters sequentially

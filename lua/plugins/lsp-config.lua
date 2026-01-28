@@ -20,6 +20,13 @@ return {
 					"golines",
 					"gomodifytags",
 					"gotests",
+					-- linters
+					"luacheck",
+					-- DAP
+				},
+				integrations = {
+					["mason-lspconfig"] = true,
+					["mason-nvim-dap"] = true,
 				},
 			})
 		end,
