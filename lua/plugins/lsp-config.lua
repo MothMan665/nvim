@@ -21,8 +21,10 @@ return {
 					"gomodifytags",
 					"gotests",
 					-- linters
-					"luacheck",
+					"checkstyle",
+					"selene",
 					-- DAP
+					"java-debug-adapter",
 				},
 				integrations = {
 					["mason-lspconfig"] = true,

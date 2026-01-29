@@ -6,7 +6,8 @@ return {
 	},
 	config = function()
 		require("lint").linters_by_ft = {
-			lua = { "luacheck" },
+			lua = { "selene" },
+			java = { "checkstyle" },
 		}
 	end,
 }
