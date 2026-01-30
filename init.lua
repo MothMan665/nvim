@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
+require("config.keymaps")
 
 -- vim kebinds and settings
 
@@ -28,5 +29,3 @@ vim.cmd("set nu rnu")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
--- neotree keys
-vim.keymap.set("n", "<C-t>", ":Neotree<CR>")
