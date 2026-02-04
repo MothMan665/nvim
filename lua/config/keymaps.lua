@@ -7,4 +7,7 @@ return {
 
 	-- Neogit key
 	vim.keymap.set("n", "<leader>gt", ":Neogit<CR>"),
+
+	-- Maven
+	vim.keymap.set("n", "<leader>mv", ":Maven<CR>"),
 }
