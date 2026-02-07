@@ -10,4 +10,8 @@ return {
 
 	-- Maven
 	vim.keymap.set("n", "<leader>mv", ":Maven<CR>"),
+
+	-- 	vim.keymap.set("n", "<leader>fa", ":Seeker files<CR>", desc == "Seek Files"),
+	-- 	vim.keymap.set("n", "<leader>ff", ":Seeker git_files<CR>", desc == "Seek Git Files"),
+	-- 	vim.keymap.set("n", "<leader>fg", ":Seeker grep<CR>", desc == "Seek Grep"),
 }
