@@ -4,6 +4,8 @@ return {
 		default_styles = {
 			lua = "EmmyLua",
 			java = "JavaDoc",
+			go = "godoc",
+			c = "Doxygen",
 		},
 	}),
 }
