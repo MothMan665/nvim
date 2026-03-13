@@ -20,9 +20,11 @@ return {
 					"golines",
 					"gomodifytags",
 					"gotests",
+					"cbfmt",
 					-- linters
 					"checkstyle",
 					"selene",
+					"alex",
 					-- DAP
 					"java-debug-adapter",
 				},
@@ -47,6 +49,8 @@ return {
 					"hyprls",
 					"pylsp",
 					"jdtls",
+					"ltex",
+					"codebook",
 				},
 			})
 		end,
