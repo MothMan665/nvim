@@ -50,7 +50,6 @@ return {
 					"pylsp",
 					"jdtls",
 					"ltex",
-					"codebook",
 				},
 			})
 		end,
@@ -67,6 +66,7 @@ return {
 			lspconfig.hyprls.setup({}) -- hyprland lsp init
 			lspconfig.pylsp.setup({}) -- python lsp init
 			lspconfig.jdtls.setup({}) -- java lsp init
+			lspconfig.ltex.setup({}) -- markup language lap init
 
 			vim.diagnostic.config({
 				virtual_text = true,
