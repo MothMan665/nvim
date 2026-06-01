@@ -1,6 +1,14 @@
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
+-- vim kebinds and settings
+
+vim.cmd("set relativenumber")
+vim.cmd("set nu rnu")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -20,12 +28,3 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
-require("config.keymaps")
-
--- vim kebinds and settings
-
-vim.cmd("set relativenumber")
-vim.cmd("set nu rnu")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")

@@ -26,7 +26,6 @@ return {
 					"selene",
 					"alex",
 					-- DAP
-					"java-debug-adapter",
 				},
 				integrations = {
 					["mason-lspconfig"] = true,
@@ -58,16 +57,16 @@ return {
 		-- lspconfig
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({}) -- lua lsp init
-			lspconfig.clangd.setup({}) -- C lsp init
-			lspconfig.gopls.setup({}) -- go lsp init
-			lspconfig.cmake.setup({}) -- Cmake lsp init
-			lspconfig.hyprls.setup({}) -- hyprland lsp init
-			lspconfig.pylsp.setup({}) -- python lsp init
-			lspconfig.jdtls.setup({}) -- java lsp init
-			lspconfig.ltex.setup({}) -- markup language lap init
-
+			vim.lsp.enable({
+				"lua_ls", -- lua lsp init
+				"clangd", -- C lsp init
+				"gopls", -- go lsp init
+				"cmake", -- Cmake lsp init
+				"hyprls", -- hyprland lsp init
+				"pylsp", -- python lsp init
+				"jdtls", -- java lsp init
+				"ltex", -- markup language lap init
+			})
 			vim.diagnostic.config({
 				virtual_text = true,
 				signs = true,
@@ -80,9 +79,9 @@ return {
 			require("blink.cmp").get_lsp_capabilities()
 
 			-- vim keybinds-for lspconfig
-			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			-- vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, {})
+			-- vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+			-- vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
 }
