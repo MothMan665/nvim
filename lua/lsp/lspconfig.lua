@@ -1,12 +1,15 @@
 return {
 	"neovim/nvim-lspconfig",
+	event = {
+		"BufReadPre",
+		"BufNewFile",
+	},
 	config = function()
-
-		vim.lsp.enable("lua_ls")
-		vim.lsp.enable("clangd")
-		vim.lsp.enable("gopls")
-		vim.lsp.enable("pylsp")
-		vim.lsp.enable("ltex")
+		vim.lsp.enable("lua_ls") -- Lua
+		vim.lsp.enable("clangd") -- C
+		vim.lsp.enable("gopls") -- Go
+		vim.lsp.enable("pylsp") -- Pyton
+		vim.lsp.enable("ltex") -- Markdown
 
 		vim.diagnostic.config({
 			virtual_text = true,
@@ -18,6 +21,5 @@ return {
 		})
 
 		require("blink.cmp").get_lsp_capabilities()
-
 	end,
 }

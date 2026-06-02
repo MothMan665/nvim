@@ -2,7 +2,7 @@ return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	opts = {
-		preset = "helix"
+		preset = "helix",
 	},
 	keys = {
 		{
@@ -52,9 +52,31 @@ return {
 			"<leader>lca",
 			mode = { "n", "v" },
 			function()
-				vim.lsp.buf.definition()
+				vim.lsp.buf.code_action()
 			end,
 			desc = "Code Actions (Lspconfig)",
+		},
+		{
+			"<leader>f",
+			mode = { "n", "v" },
+			function()
+				require("conform").format({
+					lsp_fallback = true,
+					async = false,
+					timeout = 500,
+				})
+			end,
+			desc = "Format file or range (visual mode)",
+		},
+
+		-- neoGit
+		{
+			"<leader>gt",
+			mode = { "n" },
+			function()
+				require("neogit").open()
+			end,
+			desc = "Open Git Options (NeoGit)",
 		},
 	},
 }

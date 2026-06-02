@@ -2,19 +2,28 @@ return {
 	{
 		"mason-org/mason.nvim",
 		config = function()
-			require("mason").setup()	
+			require("mason").setup()
 		end,
 	},
 
-		-- mason-tool-installer
+	-- mason-tool-installer
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		config = function()
 			require("mason-tool-installer").setup({
 				ensure_install = {
 					-- Formater's
-					"stylua", -- lua
+					"stylua", -- Lua
+					"gofumpt", -- Go
+					"gomodifytags",
+					"gotests",
+					"clang-format", -- C + derivativs (and others)
+					"cbfmt", -- Markdown
+
 					-- Linter's
+					"selene", -- Lua
+					"alex", -- Markdown
+					"ast-grep", -- C
 				},
 				intergrations = {
 					["mason-lspconfig"] = true,
@@ -31,13 +40,13 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					-- lsp's
-					"lua_ls",
-					"clangd",
-					"gopls",
-					"pylsp",
-					"ltex",
-				}
+					"lua_ls", -- lua
+					"clangd", -- C
+					"gopls", -- go
+					"pylsp", -- py
+					"ltex", -- markdown
+				},
 			})
 		end,
-	}
+	},
 }
