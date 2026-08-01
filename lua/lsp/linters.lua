@@ -2,12 +2,13 @@ return {
 	"mfussenegger/nvim-lint",
 	event = {
 		"BufReadPre",
-		"BufNewFile",
+		"bufNewFile",
 	},
 	config = function()
 		require("lint").linters_by_ft = {
 			lua = { "selene" },
-			java = { "checkstyle" },
+			markdown = { "alex" },
+			c = { "ast-grep" },
 		}
 	end,
 }

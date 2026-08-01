@@ -1,9 +1,9 @@
 return {
 	"NeogitOrg/neogit",
+	lazy = true,
 	dependencies = {
-		"nvim-lua/plenary.nvim", -- required
-		"sindrets/diffview.nvim", -- optional - Diff integration
-		"YouSame2/inlinediff-nvim", -- inline diff
+		"sindrets/diffview.nvim", -- shows code diffs
+		"m00qek/baleia.nvim", -- log pager
 	},
 	config = function()
 		require("neogit").setup()
