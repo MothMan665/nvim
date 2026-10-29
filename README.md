@@ -11,6 +11,7 @@ this is my nvim config
     - telescope -- searches active directory for project files
     - whichkey -- shows avalible commands
     - orgmode -- enables orgmode in nvim
+    - oil.nvim -- file manageman
 
 ### LSP Integration
     - blink.cmp -- code completion
