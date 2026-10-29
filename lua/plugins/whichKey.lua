@@ -32,7 +32,20 @@ return {
 			desc = "Live Grep (Telescope)",
 		},
 
+		{
+			"<leader>fm",
+			mode = { "n" },
+			function()
+				require("oil").open()
+			end,
+			desc = "Open File Mannager (Oil)"
+		},
+
 		-- Lspconfig
+		{
+			"<leader>l",
+			group = "Lsp",
+	},
 		{
 			"<leader>lh",
 			mode = { "n" },
@@ -58,7 +71,7 @@ return {
 			desc = "Code Actions (Lspconfig)",
 		},
 		{
-			"<leader>f",
+			"<leader>ff",
 			mode = { "n", "v" },
 			function()
 				require("conform").format({
