@@ -1,6 +1,5 @@
 # Nvim Config
-    - this is my nvim config 
-    - it
+    this is my nvim config 
 
 ## Features
 ### Theme
