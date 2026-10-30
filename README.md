@@ -25,6 +25,11 @@ this is my nvim config
 ## Installation
 
 ### Standard Installation
-
+to install the config on a standard linux distro clone the this repo into you neovim config directory
+this is usually the ~/.config/nvim
+```bash
+    git push https://github.com/MothMan665/nvim.git
+```
 
 ### NixOS Installation
+coming soon
