@@ -1,5 +1,4 @@
 --init.lua
-
 -- Maps leader key
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"

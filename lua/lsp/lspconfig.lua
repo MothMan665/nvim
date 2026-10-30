@@ -11,6 +11,7 @@ return {
 		vim.lsp.enable("gopls") -- Go
 		vim.lsp.enable("pylsp") -- Pyton
 		vim.lsp.enable("ltex") -- Markdown
+		vim.lsp.enable("org") -- orgmode
 
 		vim.diagnostic.config({
 			virtual_text = true,
@@ -19,7 +20,6 @@ return {
 			severaty_sort = true,
 			float = true,
 		})
-
 		-- require("blink.cmp").get_lsp_capabilities()
 	end,
 }
