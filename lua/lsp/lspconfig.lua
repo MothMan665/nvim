@@ -20,6 +20,6 @@ return {
 			severaty_sort = true,
 			float = true,
 		})
-		-- require("blink.cmp").get_lsp_capabilities()
+		require("blink.cmp").get_lsp_capabilities()
 	end,
 }
