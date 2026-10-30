@@ -5,12 +5,12 @@ return {
 		"BufReadPre",
 		"BufNewFile",
 	},
-	config = function()	
-		vim.lsp.enable("lua_ls")	-- lua 
-		vim.lsp.enable("clangd")	-- C
-		vim.lsp.enable("gopls")		-- Go
-		vim.lsp.enable("pylsp")		-- Pyton
-		vim.lsp.enable("ltex")		-- Markdown
+	config = function()
+		vim.lsp.enable("lua_ls") -- lua
+		vim.lsp.enable("clangd") -- C
+		vim.lsp.enable("gopls") -- Go
+		vim.lsp.enable("pylsp") -- Pyton
+		vim.lsp.enable("ltex") -- Markdown
 
 		vim.diagnostic.config({
 			virtual_text = true,
@@ -20,6 +20,6 @@ return {
 			float = true,
 		})
 
-		require("blink.cmp").get_lsp_capabilities()
+		-- require("blink.cmp").get_lsp_capabilities()
 	end,
 }
